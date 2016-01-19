@@ -31,7 +31,9 @@
 }
 - (IBAction)onEditButtonPressed:(id)sender {
     [self.tableView setEditing:YES animated:YES];
-    }
+     //    [self.tableView  deleteRowsAtIndexPaths:indexPath.row];
+    
+    [self.tableView endUpdates];    }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
