@@ -23,6 +23,10 @@
     self.todoItems = [[NSMutableArray alloc]initWithObjects:@"todo Item", nil];
 
 }
+- (IBAction)onSwipeRight:(id)sender {
+    
+    
+}
 
 - (IBAction)addTapped:(id)sender {
     
@@ -38,7 +42,9 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-   
+{
+    UIAlertViewStyle *deleteAlert = [UIAlertViewStyle new];
+}
     cell.textLabel.text = [NSString stringWithFormat:@"%@", [self.todoItems objectAtIndex:indexPath.row]];
   //  cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     UIView *bgColorView =[[ UIView alloc]init];
@@ -51,4 +57,16 @@
     return self.todoItems.count;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
 @end

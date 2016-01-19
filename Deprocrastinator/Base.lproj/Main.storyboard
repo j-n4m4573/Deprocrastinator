@@ -33,6 +33,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Ul4-YH-uDV"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="rMM-3k-gn1"/>
+                                    <outletCollection property="gestureRecognizers" destination="yPQ-qC-XKG" appends="YES" id="Phe-wX-sj3"/>
                                 </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDW-fR-2GF">
@@ -56,6 +57,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="yPQ-qC-XKG" appends="YES" id="FWc-Pq-ul0"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="fNM-xd-A20" id="HZx-yI-BDZ"/>
@@ -63,6 +68,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="yPQ-qC-XKG">
+                    <connections>
+                        <action selector="onSwipeRight:" destination="BYZ-38-t0r" id="hVh-Sb-GI5"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="270" y="348"/>
         </scene>
