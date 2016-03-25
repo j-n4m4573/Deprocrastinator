@@ -18,14 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
     
-    self.todoItems = [[NSMutableArray alloc]initWithObjects:@"todo Item", nil];
-
-}
-- (IBAction)onSwipeRight:(id)sender {
-    
-    
+    self.todoItems = [[NSMutableArray alloc]initWithObjects:@"Add Something", nil];
 }
 
 - (IBAction)addTapped:(id)sender {
@@ -33,20 +27,19 @@
     [self.todoItems addObject:self.textField.text];
     [self.tableView reloadData];
 }
+
 - (IBAction)onEditButtonPressed:(id)sender {
+    [self.tableView beginUpdates];
     [self.tableView setEditing:YES animated:YES];
-     //    [self.tableView  deleteRowsAtIndexPaths:indexPath.row];
-    
-    [self.tableView endUpdates];    }
+    [self.tableView endUpdates];
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-{
-    UIAlertViewStyle *deleteAlert = [UIAlertViewStyle new];
-}
+
     cell.textLabel.text = [NSString stringWithFormat:@"%@", [self.todoItems objectAtIndex:indexPath.row]];
-  //  cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    
     UIView *bgColorView =[[ UIView alloc]init];
     bgColorView.backgroundColor = [UIColor greenColor];
     cell.selectedBackgroundView = bgColorView;
@@ -58,15 +51,17 @@
     
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
 
-
-
-
-
-
-
-
-
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.todoItems removeObjectAtIndex:indexPath.row];
+        [tableView setEditing:NO];
+        [tableView reloadData];
+    }
+}
 
 
 @end
