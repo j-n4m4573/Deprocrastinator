@@ -39,6 +39,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D34C1CF1CE83E8100570831 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D9E5D6F1C4D922F0001FA83 /* DeprocrastinatorVC.h */,
+				5D9E5D701C4D922F0001FA83 /* DeprocrastinatorVC.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5D34C1D01CE83EEA00570831 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D9E5D5B1C4D91C30001FA83 /* AppDelegate.h */,
+				5D9E5D5C1C4D91C30001FA83 /* AppDelegate.m */,
+				5D9E5D611C4D91C30001FA83 /* Main.storyboard */,
+				5D9E5D641C4D91C30001FA83 /* Assets.xcassets */,
+				5D9E5D661C4D91C30001FA83 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		5D9E5D4C1C4D91C30001FA83 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +79,8 @@
 		5D9E5D571C4D91C30001FA83 /* Deprocrastinator */ = {
 			isa = PBXGroup;
 			children = (
-				5D9E5D6F1C4D922F0001FA83 /* DeprocrastinatorVC.h */,
-				5D9E5D701C4D922F0001FA83 /* DeprocrastinatorVC.m */,
-				5D9E5D5B1C4D91C30001FA83 /* AppDelegate.h */,
-				5D9E5D5C1C4D91C30001FA83 /* AppDelegate.m */,
-				5D9E5D611C4D91C30001FA83 /* Main.storyboard */,
-				5D9E5D641C4D91C30001FA83 /* Assets.xcassets */,
-				5D9E5D661C4D91C30001FA83 /* LaunchScreen.storyboard */,
-				5D9E5D691C4D91C30001FA83 /* Info.plist */,
+				5D34C1CF1CE83E8100570831 /* Controllers */,
+				5D34C1D01CE83EEA00570831 /* Views */,
 				5D9E5D581C4D91C30001FA83 /* Supporting Files */,
 			);
 			path = Deprocrastinator;
@@ -74,6 +89,7 @@
 		5D9E5D581C4D91C30001FA83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D9E5D691C4D91C30001FA83 /* Info.plist */,
 				5D9E5D591C4D91C30001FA83 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -298,6 +314,7 @@
 				5D9E5D6E1C4D91C30001FA83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
